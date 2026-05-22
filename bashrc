@@ -45,12 +45,15 @@ function __prompt_command {
       if [[ $rc -gt 128 ]] && [[ $rc -le 160 ]]; then
         signal=$(($rc - 128))
         case $signal in
-          1) rc_emo="🙃 HUP";;
+          1) rc_emo="🔌 HUP";;
           2) rc_emo="🚫 INT";;
-          3) rc_emo="👋 QUIT";;
+          3) rc_emo="💥 QUIT";;
+          4) rc_emo="🚷 ILL";;
           5) rc_emo="🥁 TRAP";;
           6) rc_emo="🙀 ABRT";;
-          9) rc_emo="⚔️  KILL";;
+          9) rc_emo="☠️ KILL";;
+          11) rc_emo="💣 SEGV";;
+          13) rc_emo="🪠 PIPE";;
           14) rc_emo="⏰ ALRM";;
           15) rc_emo="🔪 TERM";;
           *) rc_emo="😶 unknown signal";;
